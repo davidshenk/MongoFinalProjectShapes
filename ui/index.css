@@ -1,0 +1,30 @@
+.shape {
+  position: absolute;
+  cursor: pointer;
+}
+
+.shape-dot {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  left: 135px;
+  top: 135px;
+  background-color: #cc0101;
+}
+
+.shape-circle {
+  border-radius: 50%;
+}
+
+.shape-circle,
+.shape-square,
+.shape-line,
+.shape-rectangle {
+  border: 5px solid;
+}
+
+#shapes-area > #tooltip {
+  display: block;
+  position: fixed;
+  overflow: hidden;
+}

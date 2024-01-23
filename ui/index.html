@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Shapes - David&Benny</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="index.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous" />
+
+    <script src="index.js" defer></script>
+    <script src="http.js" defer></script>
+  </head>
+  <body>
+    <header></header>
+    <!-- <nav class="navbar bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand">Shapes</a>
+      </div>
+    </nav> -->
+    <main>
+      <section id="shape-data-section" class="m-3">
+        <div class="row gy-2 gx-3 align-items-center">
+          <div id="shape-type-group" class="col-auto">
+            <label for="shape-type" class="col-form-label col-form-label-sm">Type</label>
+            <select class="form-select" id="shape-type" onchange="handleSelectChanged()"></select>
+          </div>
+          <div id="shape-id-group" class="col-auto">
+            <label for="shape-id" class="col-form-label col-form-label-sm">ID</label>
+            <input type="text" class="form-control form-control-sm" id="shape-id" disabled />
+          </div>
+          <div id="shape-color-group" class="col-4 col-md-1">
+            <label for="shape-color" class="col-form-label col-form-label-sm">Color</label>
+            <input
+              type="color"
+              class="form-control form-control-sm"
+              id="shape-color"
+              value="#563d7c" />
+          </div>
+
+          <div id="shape-x-group" class="col-4 col-md-1">
+            <label for="shape-x" class="col-form-label col-form-label-sm">X</label>
+            <input type="number" class="form-control form-control-sm" id="shape-x" />
+          </div>
+          <div id="shape-y-group" class="col-4 col-md-1">
+            <label for="shape-y" class="col-form-label col-form-label-sm">Y</label>
+            <input type="number" class="form-control form-control-sm" id="shape-y" />
+          </div>
+
+          <div id="shape-radius-group" class="col-4 col-md-1">
+            <label for="shape-radius" class="col-form-label col-form-label-sm">Radius</label>
+            <input type="number" class="form-control form-control-sm" id="shape-radius" />
+          </div>
+          <div id="shape-length-group" class="col-4 col-md-1">
+            <label for="shape-length" class="col-form-label col-form-label-sm">Length</label>
+            <input type="number" class="form-control form-control-sm" id="shape-length" />
+          </div>
+          <div id="shape-vertical-group" class="col-4 col-md-1">
+            <!-- <label for="shape-vertical" class="col-form-label col-form-label-sm">Vertical</label> -->
+            <input type="checkbox" class="form-check-input" id="shape-vertical" />Vertical
+          </div>
+          <div id="shape-width-group" class="col-4 col-md-1">
+            <label for="shape-width" class="col-form-label col-form-label-sm">Width</label>
+            <input type="number" class="form-control form-control-sm" id="shape-width" />
+          </div>
+          <div id="shape-height-group" class="col-4 col-md-1">
+            <label for="shape-height" class="col-form-label col-form-label-sm">Height</label>
+            <input type="number" class="form-control form-control-sm" id="shape-height" />
+          </div>
+        </div>
+
+        <div class="row gy-2 gx-3 align-items-center">
+          <div id="shape-save-group" class="col-auto">
+            <label for="shape-save" class="col-form-label col-form-label-sm"></label>
+            <button
+              type="button"
+              class="form-control btn btn-primary"
+              id="shape-save"
+              onclick="handleSave()">
+              Save
+            </button>
+          </div>
+          <div id="shape-clear-group" class="col-auto">
+            <label for="shape-save" class="col-form-label col-form-label-sm"></label>
+            <button
+              type="button"
+              class="form-control btn btn-secondary"
+              id="shape-clear"
+              onclick="handleClear()">
+              Clear
+            </button>
+          </div>
+          <div id="shape-delete-group" class="col-auto visually-hidden">
+            <label for="shape-delete" class="col-form-label col-form-label-sm"></label>
+            <button
+              type="button"
+              class="form-control btn btn-danger"
+              id="shape-delete"
+              onclick="handleDelete()">
+              Delete
+            </button>
+          </div>
+
+          <div id="shape-count-group" class="ms-5 col-auto">
+            <label for="shape-height" class="col-form-label col-form-label-sm">Report</label>
+            <input type="text" class="form-control form-control-sm" id="shape-count" />
+            <button class="btn btn-secondary" onclick="updateCount()">Get</button>
+          </div>
+        </div>
+      </section>
+      <!-- end shape-data-section -->
+      <section
+        id="shapes-area"
+        class="container-fluid p-0 border-top border-3 border-secondary position-relative">
+        <div id="tooltip"></div>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>

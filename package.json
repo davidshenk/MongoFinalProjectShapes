@@ -1,0 +1,20 @@
+{
+  "name": "mongo-final-project-shapes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node .\\src\\index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "David and Benny",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongoose": "^7.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
